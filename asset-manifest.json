@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cc88ed0c.chunk.css",
+    "main.js": "/static/js/main.f00e37d3.chunk.js",
+    "main.js.map": "/static/js/main.f00e37d3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f291cd3a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f291cd3a.js.map",
+    "static/js/2.a7b9839f.chunk.js": "/static/js/2.a7b9839f.chunk.js",
+    "static/js/2.a7b9839f.chunk.js.map": "/static/js/2.a7b9839f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.82aab967133519c06b22f62e8bd859fa.js": "/precache-manifest.82aab967133519c06b22f62e8bd859fa.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.cc88ed0c.chunk.css.map": "/static/css/main.cc88ed0c.chunk.css.map",
+    "static/js/2.a7b9839f.chunk.js.LICENSE.txt": "/static/js/2.a7b9839f.chunk.js.LICENSE.txt",
+    "static/media/audemars-piguet.jpg": "/static/media/audemars-piguet.ab244651.jpg",
+    "static/media/cartier.jpg": "/static/media/cartier.5d6aa9ac.jpg",
+    "static/media/franck-muller.jpg": "/static/media/franck-muller.dedee21d.jpg",
+    "static/media/iwc.jpg": "/static/media/iwc.0f6b5f59.jpg",
+    "static/media/jaeger-lecoultre.jpg": "/static/media/jaeger-lecoultre.a828aa2c.jpg",
+    "static/media/maurice-lacroix.jpg": "/static/media/maurice-lacroix.af003443.jpg",
+    "static/media/montablanc.jpg": "/static/media/montablanc.09bdac02.jpg",
+    "static/media/omega.jpg": "/static/media/omega.f1bc78bf.jpg",
+    "static/media/patek-philippe.jpg": "/static/media/patek-philippe.9de071ba.jpg",
+    "static/media/rolex.jpg": "/static/media/rolex.6123f86e.jpg",
+    "static/media/sell.jpg": "/static/media/sell.37d972f4.jpg",
+    "static/media/shop.jpg": "/static/media/shop.a7f2e413.jpg",
+    "static/media/slide1.jpg": "/static/media/slide1.b97ee520.jpg",
+    "static/media/slide2.jpg": "/static/media/slide2.7602a949.jpg",
+    "static/media/slide3.jpg": "/static/media/slide3.d1f9e5d0.jpg",
+    "static/media/slide4.jpg": "/static/media/slide4.8ae37fe1.jpg",
+    "static/media/slide5.jpg": "/static/media/slide5.dd17cb08.jpg",
+    "static/media/tudor.jpg": "/static/media/tudor.ceac3bee.jpg",
+    "static/media/vacheron-constantin.jpg": "/static/media/vacheron-constantin.29e13049.jpg",
+    "static/media/vintage.jpg": "/static/media/vintage.9ff8af7e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f291cd3a.js",
+    "static/js/2.a7b9839f.chunk.js",
+    "static/css/main.cc88ed0c.chunk.css",
+    "static/js/main.f00e37d3.chunk.js"
+  ]
+}
