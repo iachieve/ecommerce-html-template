@@ -1,0 +1,39 @@
+@import '../../../scss/variables';
+
+.our-brands-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $secondary-light;
+  padding: 3rem;
+  color: $secondary;
+}
+
+.our-brands-section {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(362px, 1fr));
+  gap: 1rem;
+  background-color: red;
+}
+
+.our-brands-section__img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.our-brands-section__img-container {
+  position: relative;
+}
+
+.our-brands-section__brand-title {
+  text-transform: uppercase;
+  color: $white;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 999;
+}
