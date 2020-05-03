@@ -5,12 +5,13 @@
   padding-left: 0;
   position: relative;
   transition: all ease-in-out 350ms;
+  height: 0;
 }
 
 .main-menu-item{
   background-color: black;
   text-align: center;
-  line-height: 3rem;
+  line-height: $main-nav-height;
   transform: translateX(-100%);
   padding-left: 1rem;
   padding-right: 1rem;
@@ -33,7 +34,7 @@
 }
 
 .nav {
-  height: 3rem;
+  height: $main-nav-height;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -45,9 +46,10 @@
   line-height: $main-nav-height;
   padding: 0 1rem;
   font-weight: $bold;
-  color: $white;
   display: grid;
   grid-template-columns: max-content 1fr;
+  background: $secondary-light;
+  color: $secondary;
 }
 //RESPONSIVE MENU START
 /* label for checkbox */
@@ -120,15 +122,14 @@
 
 // any device larger than ipad pro
 @media (min-width: 1024px) {
-  .logo{
-    background-color: blueviolet;
-  }
+
   .menu-icon{
     display: none;
   }
   .nav{
     flex-direction: row;
     justify-content: space-between;
+
   }
   .main-menu-list{
     //transform: translateX(0);
@@ -140,6 +141,7 @@
   .main-menu-item{
     border: 1px solid black;
     transform: translateX(0);
+
   }
   .main-menu-item:hover{
    background-color: gray;
@@ -153,7 +155,7 @@
   .dropdown{
     padding: 0;
     position: absolute;
-    top: 3rem;
+    top: $main-nav-height;
     left: -30%;
     width: 15rem;
     //transform: translateY(calc(-100% + -3rem));
