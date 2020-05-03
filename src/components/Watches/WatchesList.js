@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {FilterContext} from './FilterContext';
 import watchesData from './db/watches';
 import Watch from "./Watch";
+import { v4 as uuidv4 } from 'uuid';
 
 const WatchesList = () => {
     const {showFilter, toggleFilter} = useContext(FilterContext);
@@ -52,7 +53,7 @@ const WatchesList = () => {
             <div className='watches-list'>
 
                 {
-                    watchesData.map(watch => <Watch watch={watch}/>)
+                    watchesData.map(watch => <Watch key={uuidv4()} watch={watch}/>)
                 }
 
             </div>

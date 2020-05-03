@@ -6,6 +6,7 @@
   position: relative;
   transition: all ease-in-out 350ms;
   height: 0;
+
 }
 
 .main-menu-item{
@@ -40,15 +41,16 @@
   flex-direction: column;
   line-height: 2;
 }
-
-.logo {
-  font-family: $sans-serif;
-  line-height: $main-nav-height;
-  padding: 0 1rem;
-  font-weight: $bold;
+.logo{
   display: grid;
   grid-template-columns: max-content 1fr;
   background: $secondary-light;
+  padding: 0 1rem;
+}
+.logo-text{
+  font-family: $sans-serif;
+  line-height: $main-nav-height;
+  font-weight: $bold;
   color: $secondary;
 }
 //RESPONSIVE MENU START
@@ -137,11 +139,11 @@
     justify-content: flex-end;
     align-items: center;
     flex-basis: 80%;
+    height: 100%;
   }
   .main-menu-item{
     border: 1px solid black;
     transform: translateX(0);
-
   }
   .main-menu-item:hover{
    background-color: gray;

@@ -72,7 +72,7 @@
 .sorting-container{
   @include flex-space-between;
   font-size: 1.1rem;
-  @media (max-width:450px) {
+  @media (max-width:770px) {
     flex-direction: column;
   }
 }
