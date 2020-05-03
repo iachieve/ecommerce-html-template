@@ -1,17 +1,43 @@
 @import '../../../scss/variables';
 
-.nav {
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // z-index: 999;
+.main-menu-list{
+  z-index: 999;
+  padding-left: 0;
+  position: relative;
+  transition: all ease-in-out 350ms;
+}
 
+.main-menu-item{
+  background-color: black;
+  text-align: center;
+  line-height: 3rem;
+  transform: translateX(-100%);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.dropdown{
+  padding-left: 2rem;
+}
+.dropdown-item{
+  background-color: gray;
+}
+
+.dropdown-item > a{
+  color: black;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 1rem;
+}
+
+.nav {
+  height: 3rem;
+  background-color: black;
   display: flex;
-  justify-content: space-between;
-  height: $main-nav-height;
-  background: rgba($black, .7);
-  transition: background-color .3s;
+  flex-direction: column;
+  line-height: 2;
 }
 
 .logo {
@@ -20,92 +46,127 @@
   padding: 0 1rem;
   font-weight: $bold;
   color: $white;
+  display: grid;
+  grid-template-columns: max-content 1fr;
 }
-
-.main-menu-list {
-  display: flex;
-  align-items: center;
-  // justify-content: flex-start;
-}
-
-.main-menu-item {
-  position: relative;
-  width: 9rem;
-  height: 100%;
-}
-
-.main-menu-item>a {
-  text-transform: uppercase;
-  display: block;
-  height: 100%;
-  line-height: $main-nav-height;
-  text-align: center;
-}
-
-.main-menu-item>a:hover {
-  color: $white;
-}
-
-.main-menu-item:hover>.dropdown {
-  display: flex;
-  flex-direction: column;
-}
-
-.dropdown {
-  display: none;
-  position: absolute;
-  top: $main-nav-height;
-}
-
-// ===============
-.dropdown-item {
-  height: 2.5rem;
-  width: 14rem;
-
-  text-transform: none;
-  border: 1px solid blue;
-  background-color: lime;
-}
-
-.dropdown-item>a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  line-height: 2.5rem;
-
-  background-color: pink;
-  text-align: center;
-
-}
-
-.dropdown-item a:hover {
-  display: block;
-  width: 100%;
-  background: red;
-
-}
-
-.search {
-  color: $white;
-}
-
-.search-icon {
+//RESPONSIVE MENU START
+/* label for checkbox */
+.menu-icon {
+ height: 100%;
+  width: 3rem;
+  margin-right: 2px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.search-icon:hover {
-  color: $light-gray;
-}
-
-.search-icon:focus>.search-input {
-  top: calc(3rem + 2px);
+/* span inside label */
+.menu-icon .nav-icon {
+  background: #333;
   display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background .2s ease-out;
 }
 
-.search-input {
-  position: fixed;
-  // 3rem : $main-nav-height;
+.menu-icon .nav-icon::before {
+  content: '';
+  background: #333;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 5px;
+  transition: all .2s ease-out;
+}
+
+.menu-icon .nav-icon::after {
+  content: '';
+  background: #333;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -5px;
+  transition: all .2s ease-out;
+}
+
+// span animation
+
+.menu-btn:checked~.menu-icon .nav-icon {
+  background: transparent;
+}
+
+.menu-btn:checked~.menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
   top: 0;
+}
+
+.menu-btn:checked~.menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+//check box
+.menu-btn {
   display: none;
-  right: 0;
+}
+
+/* when menu checked */
+.show-main-menu-item  {
+  transform: translateX(100%);
+}
+
+// any device larger than ipad pro
+@media (min-width: 1024px) {
+  .logo{
+    background-color: blueviolet;
+  }
+  .menu-icon{
+    display: none;
+  }
+  .nav{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main-menu-list{
+    //transform: translateX(0);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 80%;
+  }
+  .main-menu-item{
+    border: 1px solid black;
+    transform: translateX(0);
+  }
+  .main-menu-item:hover{
+   background-color: gray;
+  }
+  .main-menu-item:hover>.dropdown {
+    height: auto;
+  }
+  .main-menu-item:hover .dropdown-item {
+    display: block;
+  }
+  .dropdown{
+    padding: 0;
+    position: absolute;
+    top: 3rem;
+    left: -30%;
+    width: 15rem;
+    //transform: translateY(calc(-100% + -3rem));
+
+    height: 0;
+    overflow: hidden;
+  }
+  .dropdown-item>a{
+    background-color: black;
+    color: gray;
+  }
+  .dropdown-item>a:hover{
+    background-color: gray;
+    color: black;
+  }
 }

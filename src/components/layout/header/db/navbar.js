@@ -11,7 +11,7 @@ const navbarData = [
   {
     title: 'Categories',
     hasSubMenu: true,
-    subMenuList: ["Men's Watches / Women's Watches", "New Watches / Pre - Owned Watches", "Mechanical Watches / Automatic Watches", "Vintage Watches", "Chronographs", "Diving Watches", "Pilot's Watches", "Military Watches", "Swiss Watches", "Racing Watches", "Sailing Watches", "Bracelets and Straps / Parts and Accessories"]
+    subMenuList: ["Men's / Women's Watches", "New / Pre - Owned Watches", "Mechanical / Automatic Watches", "Vintage Watches", "Chronographs", "Diving Watches", "Pilot's Watches", "Military Watches", "Swiss Watches", "Racing Watches", "Sailing Watches", "Accessories"]
   },
   {
     title: 'Services',

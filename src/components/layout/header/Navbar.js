@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react'
-import NavbarData from '../db/navbar';
+import React, {useState, useEffect, useRef, useContext} from 'react'
+import NavbarData from './db/navbar';
 import { v4 as uuidv4 } from 'uuid';
-import Search from '../search/Search';
+import Search from './Search';
+import {HeaderContext} from "./HeaderContext";
 
 const Navbar = () => {
+  const {showMenu, ToggleMenu} = useContext(HeaderContext);
 
   const buildMenu = subMenuList => {
     return subMenuList.map(subMenu => {
@@ -13,9 +15,8 @@ const Navbar = () => {
     })
   };
 
-  console.log('NavbarData', NavbarData);
   return (
-    <ul className='main-menu-list'>
+    <ul className={showMenu ? 'main-menu-list show-main-menu-item': 'main-menu-list'}>
       {
         NavbarData.map(el => {
           let subMenu;
@@ -35,7 +36,7 @@ const Navbar = () => {
           )
         })
       }
-      <Search />
+      {/*<Search />*/}
     </ul>
   )
 }

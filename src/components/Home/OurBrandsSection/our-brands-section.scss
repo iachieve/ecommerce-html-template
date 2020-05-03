@@ -1,4 +1,5 @@
-@import '../../../scss/variables';
+@import '../../../scss/variables.scss';
+@import '../../../scss/typography.scss';
 
 .our-brands-section-wrapper {
   display: flex;
@@ -12,9 +13,14 @@
 
 .our-brands-section {
   display: grid;
-  grid-template-columns: repeat(4, minmax(362px, 1fr));
+  grid-template-columns: repeat(3, minmax(362px, 1fr));
   gap: 1rem;
-  background-color: red;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, minmax(362px, 1fr));
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .our-brands-section__img {
@@ -35,5 +41,5 @@
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  z-index: 999;
+  z-index: 888;
 }

@@ -4,16 +4,18 @@ import './scss/base.scss';
 
 import Header from './components/layout/header';
 import Home from './pages/Home';
+import Footer from "./components/layout/footer/Footer";
 
 
 
 
 function App() {
   return (
-   <div>
+   <>
     <Header/>
     <Home/>
-   </div>
+    <Footer/>
+   </>
   );
 }
 

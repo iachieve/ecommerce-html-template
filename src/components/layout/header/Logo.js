@@ -1,9 +1,11 @@
 import React from 'react'
+import MenuIcon from "./MenuIcon";
 
 function Logo() {
   return (
     <div className='logo'>
-      Watches E-boutique
+        <MenuIcon />
+        <div className='logo-text'>Watches E-boutique</div>
     </div>
   )
 }

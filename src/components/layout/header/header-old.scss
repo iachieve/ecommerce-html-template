@@ -1,0 +1,190 @@
+@import '../../../scss/variables';
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  height: $main-nav-height;
+  background: rgba($black, 1);
+  transition: background-color .3s;
+  @media(max-width:1200px) {
+   position: relative;
+   opacity: 1;
+  }
+}
+
+.logo {
+  font-family: $sans-serif;
+  line-height: $main-nav-height;
+  padding: 0 1rem;
+  font-weight: $bold;
+  color: $white;
+}
+
+.main-menu-list {
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+
+.main-menu-item {
+  position: relative;
+  height: 100%;
+  background: rgba($black, 1);
+  flex: 1;
+  text-align: center;
+  display: flex;
+}
+
+.main-menu-item>a {
+  text-transform: uppercase;
+  flex: 1;
+  line-height: $main-nav-height;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+}
+
+.main-menu-item>a:hover {
+  background-color: $light-gray;
+  color: $black;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: $main-nav-height;
+  z-index: 999;
+  background: rgba($black, 1);
+}
+
+.main-menu-item:hover>.dropdown {
+  height: auto;
+}
+
+.main-menu-item:hover .dropdown-item {
+  display: block;
+}
+
+.dropdown-item {
+  width: 16rem;
+  text-transform: none;
+  border-bottom: 1px dotted $light-gray;
+  display: block; // here
+
+}
+
+.dropdown-item>a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+.dropdown-item a:hover {
+  display: block;
+  width: 100%;
+  background-color: $light-gray;
+  color: $black;
+}
+
+.search {
+  color: $white;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  color: $light-gray;
+}
+
+.search-icon:focus>.search-input {
+  top: calc(3rem + 2px);
+  display: block;
+}
+
+.search-input {
+  position: fixed;
+  // 3rem : $main-nav-height;
+  top: 0;
+  display: none;
+  right: 0;
+}
+
+
+//RESPONSIVE MENU START
+/* label for checkbox */
+.menu-icon {
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+  @media(max-width:1200px) {
+    display: block;
+  }
+}
+
+/* span inside label */
+.menu-icon .nav-icon {
+  background: #333;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background .2s ease-out;
+}
+
+.menu-icon .nav-icon::before {
+  content: '';
+  background: #333;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 5px;
+  transition: all .2s ease-out;
+}
+
+.menu-icon .nav-icon::after {
+  content: '';
+  background: #333;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -5px;
+  transition: all .2s ease-out;
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* when menu checked */
+.menu-btn:checked~.main-menu-item  {
+  height: 100%;
+
+}
+
+.menu-btn:checked~.menu-icon .nav-icon {
+  background: transparent;
+}
+
+.menu-btn:checked~.menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.menu-btn:checked~.menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+

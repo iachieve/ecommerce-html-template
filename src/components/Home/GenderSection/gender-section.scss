@@ -1,0 +1,56 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/typography.scss';
+
+.gender-section-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $secondary;
+  padding: 3rem;
+}
+
+.gender-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 4px;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    width: 90vw;
+    align-items: center;
+  }
+}
+
+.gender-section--women,
+.gender-section--men {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+  position: relative;
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
+}
+
+.gender-section-text__men,
+.gender-section-text__women{
+  position: absolute;
+  background: #ffffff;
+  color: black;
+  top: 25px;
+  bottom: 20px;
+  left: 20px;
+  padding: 1.5rem;
+  opacity: 0.8;
+}
+
+.gender-section-text__men{
+  background: $men-section-background;
+}
+.gender-section-text__women{
+  background: $women-section-background;
+}
+.gender-section__title {
+  color: $white;
+}

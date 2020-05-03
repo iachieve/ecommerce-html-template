@@ -11,17 +11,27 @@
 }
 
 .category-section {
-  background-color: red;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 0 4px;
+  @media (max-width: 450px) {
+    flex-direction: column;
+    width: 80vw;
+    align-items: center;
+
+  }
 }
 
 .category-section__img-container {
   flex: 28%;
   max-width: 28%;
   padding: 0 4px;
+  @media (max-width: 450px) {
+    max-width: 90%;
+    margin-bottom: 1rem;
+  }
+
 }
 
 .category-section__img {
