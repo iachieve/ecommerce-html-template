@@ -1,6 +1,23 @@
-.footer{
+@import '../../../scss/variables.scss';
+
+.footer {
   width: 100vw;
- display: flex;
-  justify-content: center;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  background: $primary;
+  color: $white;
+}
+.footer__icons-container{
+
+}
+
+.footer-icon{
+  font-size: 3rem;
+  margin-left: 10px;
+}
+.footer-icon:hover{
+  color: $secondaryDark;
+
 }

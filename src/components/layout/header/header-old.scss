@@ -51,7 +51,7 @@
 }
 
 .main-menu-item>a:hover {
-  background-color: $light-gray;
+  background-color: $lightGray;
   color: $black;
 }
 
@@ -74,7 +74,7 @@
 .dropdown-item {
   width: 16rem;
   text-transform: none;
-  border-bottom: 1px dotted $light-gray;
+  border-bottom: 1px dotted $lightGray;
   display: block; // here
 
 }
@@ -90,7 +90,7 @@
 .dropdown-item a:hover {
   display: block;
   width: 100%;
-  background-color: $light-gray;
+  background-color: $lightGray;
   color: $black;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .search-icon:hover {
-  color: $light-gray;
+  color: $lightGray;
 }
 
 .search-icon:focus>.search-input {

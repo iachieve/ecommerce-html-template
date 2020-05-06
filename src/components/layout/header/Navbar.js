@@ -1,11 +1,10 @@
-import React, {useState, useEffect, useRef, useContext} from 'react'
+import React, { useContext} from 'react'
 import NavbarData from './db/navbar';
 import { v4 as uuidv4 } from 'uuid';
-import Search from './Search';
 import {HeaderContext} from "./HeaderContext";
 
 const Navbar = () => {
-  const {showMenu, ToggleMenu} = useContext(HeaderContext);
+  const {showMenu} = useContext(HeaderContext);
 
   const buildMenu = subMenuList => {
     return subMenuList.map(subMenu => {
@@ -24,7 +23,7 @@ const Navbar = () => {
             subMenu = buildMenu(el.subMenuList);
           }
           return (
-            <li key={uuidv4()} className='main-menu-item' key={uuidv4()}>
+            <li key={uuidv4()} className='main-menu-item'>
               <a href='#'>{el.title}</a>
               {
                 el.hasSubMenu &&
@@ -36,7 +35,6 @@ const Navbar = () => {
           )
         })
       }
-      {/*<Search />*/}
     </ul>
   )
 }

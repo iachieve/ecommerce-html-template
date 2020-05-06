@@ -10,21 +10,21 @@ function CategorySections() {
     <section className='category-section-wrapper'>
       <h1 className='section-title'>our services</h1>
       <div className='category-section'>
-        <div className= "category-section__img-container">
+        <div className= "category-section__img-container img-hover-zoom ">
           <a href='#'>
 
             <img alt="shop vintage wages" className="category-section__img" src={imgVintage} />
 
           </a>
         </div>
-        <div className= "category-section__img-container">
+        <div className= "category-section__img-container img-hover-zoom ">
           <a href='#'>
 
             <img alt="sell" className="category-section__img" src={imgSell} />
 
           </a>
         </div>
-        <div className= "category-section__img-container">
+        <div className= "category-section__img-container img-hover-zoom ">
           <a href='#'>
 
             <img alt="shop watches" className="category-section__img" src={imgShop} />

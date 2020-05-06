@@ -1,13 +1,15 @@
-@import '../../scss/variables';
-@import '../../scss/mixins';
-@import '../../scss/tags';
+@import "../../scss/variables";
+@import "../../scss/mixins";
+@import "../../scss/tags";
 
-.watches-list-wrapper{
-  color: $secondary;
+.watches-list-wrapper {
+  color: $primary;
 }
-// filter
-.filter{
-  border-right: 1px solid $light-gray;
+
+// filter sidebar column
+.filter {
+  color: $primary;
+  border-right: 1px solid $lightGray;
   width: 230px;
   padding: 1rem;
   background-color: $white;
@@ -19,98 +21,112 @@
   top: 0;
   left: 0;
 }
-.filter__sub-section{
+.filter__sub-section {
   margin-top: 1rem;
 }
-.filter__subsection-title{
-  margin-left: -.5rem;
+.filter__subsection-title {
+  margin-left: -0.5rem;
   text-transform: uppercase;
 }
 
-.filter-item{
+.filter-item {
   @include flex-space-between;
   font-family: $sans-serif;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.filter-item:hover{
+  background: $secondaryDark;
 }
 
-//Watches LIST
-.show-filter{
+  // filter toggle button
+.show-filter {
   transform: translateX(0);
 }
 
-.filter-toggle{
-  border: 1px solid $secondary-light;
+.filter-toggle {
+  border: 1px solid $secondaryDark;
   padding: 1rem 0;
   text-align: center;
   font-weight: 900;
   margin: 0 auto;
   width: 100%;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
-.filter-toggle > .fas{
-  color: $secondary-light;
+
+.filter-toggle > .fas {
+  color: $secondaryDark;
   margin-right: 5px;
 }
-// watch list
 
-.pages-count-container{
-  display: flex;
-}
-.pages-count-container{
+// pages-count-container
+
+.pages-count-container {
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
+  @media (max-width: 770px) {
+    justify-content: center;
+  }
 }
-.pages-count-container__buttons > button{
-  border: 1px solid $secondary-light;
+
+.pages-count-container__buttons > button {
+  border: 1px solid $secondaryDark;
   padding: 10px;
   margin-right: 5px;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
-.pages-count-container__text{
+
+.pages-count-container__text {
   font-size: 1.1rem;
 }
 
-.sorting-container{
+// sorting-container
+
+.sorting-container {
   @include flex-space-between;
   font-size: 1.1rem;
-  @media (max-width:770px) {
+  margin-bottom: 1rem;
+  @media (max-width: 770px) {
     flex-direction: column;
   }
 }
 
-
 // watches list
-.watches-list{
+
+.watches-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 400px;
   grid-gap: 1rem;
-  @media (max-width: 870px){
+  @media (max-width: 870px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 770px){
+  @media (max-width: 770px) {
     grid-template-columns: 1fr;
   }
 }
 
-.watches-list__item{
-position: relative;
+.watches-list__item {
+  position: relative;
   //height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.view-details-btn{
-  background-color: $secondary;
-  color: $secondary-light;
+.view-details-btn {
+  background-color: $primary;
+  color: $secondaryDark;
   width: 90%;
   text-align: center;
   padding: 1rem 2rem;
   transition: all ease-in-out 350ms;
 }
-.view-details-btn:hover{
-  background-color: $secondary-light;
-  color: $secondary;
+.view-details-btn:hover {
+  background-color: $secondaryDark;
+  color: $primary;
   width: 90%;
   text-align: center;
   padding: 1rem 2rem;
@@ -119,43 +135,86 @@ position: relative;
   position: absolute;
   bottom: 0;
   top: 0;
-  background: rgba($secondary-light, 0.4); /* Black see-through */
+  background: rgba($secondaryDark, 0.4); /* Black see-through */
   width: 100%;
-  transition: .5s ease;
-  opacity:0;
+  transition: 0.5s ease;
+  opacity: 0;
   @include flex-center;
-
-
 }
 
-.watches-list__item:hover .overlay{
+.watches-list__item:hover .overlay {
   opacity: 1;
 }
-.watches-list__img-container{
+.watches-list__img-container {
   //max-height: 260px;
- width: 100%;
+  width: 100%;
   text-align: center;
 }
-.watches-list__img{
+.watches-list__img {
   height: 260px;
 }
-.watches-list__brand{
+.watches-list__brand {
   font-family: $serif;
   width: 100%;
   text-align: center;
-  text-transform : uppercase;
+  text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 700;
   font-size: 1.3rem;
 }
-.watches-list__model{
+.watches-list__model {
   font-weight: 500;
   font-size: 1.2rem;
 }
-.watches-list__model-price--before{
-  color: $secondary;
+.watches-list__model-price--before {
+  color: $primary;
   margin-right: 1rem;
 }
-.watches-list__model-price--after{
+.watches-list__model-price--after {
   text-decoration: line-through;
+}
+
+// pagination
+
+// dummy watches header
+.dummy-watches-header{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: .8rem;
+}
+.dummy-watches-header h1{
+  color: $primary;
+}
+.dummy-watches-header h1 span{
+  color: $primaryLight;
+}
+.dummy-watches-header p{
+  font-weight: bold;
+}
+@media (min-width: 1024px) {
+  .filter-toggle{
+    display: none;
+  }
+  .filter{
+   grid-column: 1;
+    transform: translateX(0);
+    position: relative;
+  }
+  .watches-info-container{
+  display: grid;
+  grid-template-columns: 250px 1fr;
+    grid-template-rows: min-content auto;
+
+}
+  .watches-list-wrapper{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .dummy-watches-header{
+    grid-row: 1;
+    grid-column: 1/3;
+
+  }
 }

@@ -1,42 +1,64 @@
 @import '../../../scss/variables';
 
 .main-menu-list{
-  z-index: 999;
+  z-index: 950;
   padding-left: 0;
   position: relative;
   transition: all ease-in-out 350ms;
   height: 0;
-
+  background: $primary;
 }
 
 .main-menu-item{
-  background-color: black;
-  text-align: center;
+  text-align: left;
   line-height: $main-nav-height;
   transform: translateX(-100%);
+  transition: all ease-in-out 350ms;
+}
+.main-menu-item > a{
+  display: inline-block;
+  height: 100%;
+  width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
+  transition: all ease-in-out 350ms;
+  color: $secondaryDark;
+  background: $primary;
+  font-weight: bold;
 }
-
+.main-menu-item > a:hover{
+  color: $primary;
+  background: $secondaryDark;
+}
 .dropdown{
-  padding-left: 2rem;
+  //padding-left: 2rem;
 }
 .dropdown-item{
-  background-color: gray;
+
 }
 
 .dropdown-item > a{
-  color: black;
+  background-color: $primary;
+  color: $secondaryDark;
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 0 1rem;
+  z-index: 999;
+  border-bottom: 1px dotted $secondaryDark;
+  padding: 0 0 0 70px;
+}
+.dropdown-item > a:before {
+  content: "\00BB \0020";
+}
+.dropdown-item > a:hover {
+  background:$secondaryDark;
+  color: $primary;
 }
 
-.nav {
+  .nav {
   height: $main-nav-height;
-  background-color: black;
+  background-color: $primary;
   display: flex;
   flex-direction: column;
   line-height: 2;
@@ -44,14 +66,14 @@
 .logo{
   display: grid;
   grid-template-columns: max-content 1fr;
-  background: $secondary-light;
+  background: $secondaryDark;
   padding: 0 1rem;
 }
 .logo-text{
   font-family: $sans-serif;
   line-height: $main-nav-height;
   font-weight: $bold;
-  color: $secondary;
+  color: $primary;
 }
 //RESPONSIVE MENU START
 /* label for checkbox */
@@ -124,17 +146,14 @@
 
 // any device larger than ipad pro
 @media (min-width: 1024px) {
-
   .menu-icon{
     display: none;
   }
   .nav{
     flex-direction: row;
     justify-content: space-between;
-
   }
   .main-menu-list{
-    //transform: translateX(0);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -142,35 +161,30 @@
     height: 100%;
   }
   .main-menu-item{
-    border: 1px solid black;
     transform: translateX(0);
   }
-  .main-menu-item:hover{
-   background-color: gray;
-  }
+
   .main-menu-item:hover>.dropdown {
     height: auto;
   }
   .main-menu-item:hover .dropdown-item {
     display: block;
   }
+  .show-main-menu-item {
+    transform: translateX(0);
+  }
   .dropdown{
     padding: 0;
     position: absolute;
     top: $main-nav-height;
-    left: -30%;
-    width: 15rem;
-    //transform: translateY(calc(-100% + -3rem));
-
+    width: 18rem;
     height: 0;
     overflow: hidden;
   }
-  .dropdown-item>a{
-    background-color: black;
-    color: gray;
+  .dropdown-item{
+    text-align: left;
   }
-  .dropdown-item>a:hover{
-    background-color: gray;
-    color: black;
+  .dropdown-item > a{
+    padding: 0 0 0 20px;
   }
 }

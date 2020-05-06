@@ -1,16 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Watch = ({watch}) => {
-console.log(watch);
 
     return (
         <div className='watches-list__item'>
             <div className='overlay'>
-                <a className='view-details-btn' href='#'>VIEW DETAILS</a>
+                <Link to={`/WatchInfo/${watch.id}`} className='view-details-btn' href='#'>VIEW DETAILS</Link>
             </div>
             <div className='watches-list__img-container'>
                 <img src={watch.images[0]}
-                     alt='whatever' className="watches-list__img"/>
+                    alt='whatever' className="watches-list__img" />
             </div>
             <div className='watches-list__brand'>
                 {watch.brand}
@@ -26,7 +26,6 @@ console.log(watch);
                 <span className='watches-list__model-price--after'>${watch.priceAfter}</span>
             </div>
         </div>
-
     );
 };
 

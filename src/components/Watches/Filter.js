@@ -3,20 +3,19 @@ import './watches.scss';
 import {FilterContext} from './FilterContext';
 
 const Filter = () => {
-    const {showFilter, setShowFilter} = useContext(FilterContext);
-
+    const {showFilter} = useContext(FilterContext);
     return (
         <div className={showFilter? 'filter show-filter': 'filter'}>
             <div className='filter__sub-section'>
                 <h4 className='filter__subsection-title'>Top Brands</h4>
-                <div className='filter-item'>
+                <label htmlFor='chk' className='filter-item'>
                     <div className='filter__subsection-input'>
-                        <input type='checkbox'/> <span>Rolex</span>
+                        <input id='chk' type='checkbox'/> <span>Rolex</span>
                     </div>
                     <div className='filter__subsection-count'>
                         (498)
                     </div>
-                </div>
+                </label>
                 <div className='filter-item'>
                     <div className='filter__subsection-input'>
                         <input type='checkbox'/> <span>OMEGA</span>
@@ -117,16 +116,7 @@ const Filter = () => {
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
-
-
-
-
-
     );
 };
 

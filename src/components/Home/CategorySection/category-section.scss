@@ -6,28 +6,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: $secondary;
-  padding: 3rem;
+  background: $offWhite;
+  padding: 5rem;
+  color: $secondaryDark;
 }
 
 .category-section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   padding: 0 4px;
-  @media (max-width: 450px) {
+  @media (max-width: 768px) {
     flex-direction: column;
-    width: 80vw;
+    //width: 80vw;
     align-items: center;
 
   }
 }
 
 .category-section__img-container {
-  flex: 28%;
-  max-width: 28%;
+  //flex: 28%;
+  //max-width: 28%;
   padding: 0 4px;
-  @media (max-width: 450px) {
+  @media (max-width: 768px) {
     max-width: 90%;
     margin-bottom: 1rem;
   }
@@ -42,6 +42,21 @@
   box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
-.category-section__img:hover {
-  opacity: .8;
+//.category-section__img:hover {
+//  opacity: .8;
+//}
+
+.img-hover-zoom {
+  min-height: 331px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.3);
 }

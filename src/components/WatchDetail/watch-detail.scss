@@ -1,0 +1,137 @@
+@import '../../scss/variables';
+@import '../../scss/tags';
+
+// defaults
+.watch-detail-main-section,
+.watch-detail__specs,
+.watch-detail-guide,
+.watch-detail__testimonials{
+  padding: 1rem;
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+// watch detail main section
+.watch-detail-main-section{
+  @media (min-width: 768px){
+    flex-direction: row;
+  }
+}
+.watch-detail-main-section-gallery-container{
+  margin-right: 4rem;
+}
+.watch-detail-main-section-gallery-container,
+.watch-detail-main-section-specs-container{
+  flex-basis: 50%;
+}
+
+.watch-detail__price{
+  color: $primaryLight;
+}
+
+.watch-detail__subtitle-dark{
+  color: $darkGray;
+}
+.watch-detail__subtitle-light{
+  color: $lightGray;
+}
+
+.watch-detail__warranty-buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 1rem;
+}
+.watch-detail__add-to-cart{
+ display: grid;
+  margin-bottom: 1rem;
+}
+.watch-detail__social-media{
+  margin-bottom: 1rem;
+}
+.watch-detail__social-media__title{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: $primary;
+  margin-right: 1rem;
+}
+.in-stock{
+  color: #2259A8;
+  font-weight: 700;
+}
+.watch-detail__short-desc{
+  color: $darkGray;
+}
+
+// watch detail specs
+.watch-detail__specs{
+  background: $secondaryLight;
+  @media (min-width: 768px){
+    flex-direction: column;
+  }
+}
+.watch-detail__specs-container{
+  @media (min-width: 768px){
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+  }
+}
+.watch-detail__specs__title{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.watch-detail__specs__table{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.watch-detail__specs__row{
+  display: flex;
+}
+.watch-detail__specs__cell{
+  width: 250px;
+}
+.watch-detail__desc_p{
+  margin-bottom: 1rem;
+}
+
+// Watch Detail Guide
+.watch-detail-guide{
+
+  @media (min-width: 768px){
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.guide-icon{
+  color: $secondaryDark;
+  margin-right: 5px;
+}
+.watch-detail-guide-section{
+  margin-bottom: 1rem;
+  flex-basis: 50%;
+}
+.watch-detail-guide-section + .watch-detail-guide-section{
+  @media (min-width: 768px){
+    margin-left: 3rem;
+  }
+}
+// Watch Detail Testimonials
+
+.carousel .slide{
+  background: $white;
+}
+
+  // watch detail testimonials
+.watch-detail__testimonials{
+
+}
+
+
+
+
+
+
+
