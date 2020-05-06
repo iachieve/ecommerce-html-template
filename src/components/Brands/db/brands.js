@@ -468,7 +468,12 @@ const allBrands = [
     { value: 467, label: "Zeno-Watch Basel" },
     { value: 468, label: "ZentRa" },
     { value: 469, label: "Zeppelin" },
-    { value: 470, label: "Zodiac" }];
+    { value: 470, label: "Zodiac" },
+    { value: 471, label: "CHONOSWISS" },
+    {value: 472, label: "Girard Perregaux"}
+
+
+];
 
 export  default  allBrands;
 // const fs = require('fs');

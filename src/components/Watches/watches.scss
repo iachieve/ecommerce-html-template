@@ -177,14 +177,16 @@
 // pagination
 
 // dummy watches header
-.dummy-watches-header{
+.dummy-watches-header,
+.dynamic-watches-header{
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
   text-align: center;
   font-size: .8rem;
 }
-.dummy-watches-header h1{
+.dummy-watches-header h1,
+.dynamic-watches-header{
   color: $primary;
 }
 .dummy-watches-header h1 span{
@@ -193,28 +195,38 @@
 .dummy-watches-header p{
   font-weight: bold;
 }
+.dynamic-watches-header{
+  background: $secondaryLight;
+  color: $secondaryDark;
+  padding: 1rem 0;
+}
 @media (min-width: 1024px) {
   .filter-toggle{
     display: none;
   }
+  .watches-info-container{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: min-content min-content auto;
+
+  }
   .filter{
    grid-column: 1;
+    grid-row: 3/-1;
     transform: translateX(0);
     position: relative;
   }
-  .watches-info-container{
-  display: grid;
-  grid-template-columns: 250px 1fr;
-    grid-template-rows: min-content auto;
 
-}
-  .watches-list-wrapper{
-    grid-column: 2;
-    grid-row: 2;
-  }
   .dummy-watches-header{
     grid-row: 1;
     grid-column: 1/3;
-
+  }
+  .watches-list-wrapper{
+      grid-column: 2;
+      grid-row: 3;
+    }
+  .dynamic-watches-header{
+    grid-column: 1/3;
+    grid-row: 2;
   }
 }

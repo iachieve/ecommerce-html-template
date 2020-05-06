@@ -6,11 +6,9 @@ function Logo() {
   return (
     <div className='logo'>
         <MenuIcon />
-        <Link to='/' className='logo-text'>
+        <Link to='/home' className='logo-text'>
             Watches E-boutique
         </Link>
-
-
     </div>
   )
 }

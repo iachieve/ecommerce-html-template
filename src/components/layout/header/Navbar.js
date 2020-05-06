@@ -10,7 +10,9 @@ const Navbar = () => {
   const buildMenu = subMenuList => {
     return subMenuList.map(subMenu => {
       return (
-        <li key={uuidv4()} className='dropdown-item'><a href='#'>{subMenu}</a></li>
+        <li key={uuidv4()} className='dropdown-item'>
+          <Link to={`/watches/${subMenu}`}>{subMenu}</Link>
+        </li>
       )
     })
   };
@@ -25,7 +27,7 @@ const Navbar = () => {
           }
           return (
             <li key={uuidv4()} className='main-menu-item'>
-              <Link to={`/${el.title}`}>{el.title}</Link>
+              <Link to={`/${el.link}`}>{el.title}</Link>
               {
                 el.hasSubMenu &&
                 <ul key={uuidv4()} className='dropdown'>

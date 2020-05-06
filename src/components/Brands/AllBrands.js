@@ -6,12 +6,12 @@ import { withRouter } from 'react-router-dom';
 
 function AllBrands(props) {
     const handleSorter = (selected) => {
-        props.history.push(`/watches/brandId=${selected[0].label}`);
+        props.history.push(`/watches/${selected[0].label}`);
     };
 
     return (
         <React.Fragment>
-                <h2>All Brands</h2>
+                <h2>Watch Brands and Manufacturers</h2>
                 <AlpabetSorter
                     asGroup={allBrands}
                     asName='usage_example'
