@@ -4,6 +4,10 @@ const navbarData = [
     hasSubMenu: false
   },
   {
+    title: 'watches',
+    hasSubMenu: false
+  },
+  {
     title: 'Brands',
     hasSubMenu: true,
     subMenuList: ["Rolex",

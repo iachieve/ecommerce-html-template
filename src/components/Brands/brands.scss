@@ -1,0 +1,52 @@
+@import "../../scss/variables";
+
+.brands-container{
+  padding: 2rem;
+  color: $primary;
+}
+.brands-container h2{
+  text-align: center;
+  margin-bottom: 2rem;
+  color: $secondaryDark;
+}
+.as-items__chunk{
+display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  border-bottom: 1px dotted $secondaryDark;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 450px) {
+
+  }
+}
+.as-item{
+  display: flex;
+}
+.as-item__navigator{
+  color: $secondaryDark;
+  font-weight: 900;
+  font-size: 30px;
+  width: 100px;
+  //background: red;
+  height: 100%;
+}
+.as-item__content{
+  padding-left: .5rem;
+  transition: all ease-in 350ms;
+display: inline-block;
+  margin-left: 100px;
+
+}
+.as-item__content:hover{
+  //border: 1px solid red;
+  background:$secondaryDark;
+  color:  $primary;
+ font-weight: bold;
+}
+
+.as-item--navigator .as-item__navigator{
+  //position: relative;
+  //left: 0;
+}

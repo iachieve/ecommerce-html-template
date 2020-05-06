@@ -2,6 +2,7 @@ import React, { useContext} from 'react'
 import NavbarData from './db/navbar';
 import { v4 as uuidv4 } from 'uuid';
 import {HeaderContext} from "./HeaderContext";
+import {Link} from "react-router-dom";
 
 const Navbar = () => {
   const {showMenu} = useContext(HeaderContext);
@@ -24,7 +25,7 @@ const Navbar = () => {
           }
           return (
             <li key={uuidv4()} className='main-menu-item'>
-              <a href='#'>{el.title}</a>
+              <Link to={`/${el.title}`}>{el.title}</Link>
               {
                 el.hasSubMenu &&
                 <ul key={uuidv4()} className='dropdown'>
