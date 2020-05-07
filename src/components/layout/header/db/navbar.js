@@ -12,6 +12,7 @@ const navbarData = [
   {
     title: 'Brands',
     hasSubMenu: true,
+    link:'brands',
     subMenuList: ["Rolex",
       "Omega",
       "Patek Philippe",

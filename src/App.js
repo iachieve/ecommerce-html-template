@@ -8,6 +8,7 @@ import Footer from "./components/layout/footer/Footer";
 import Watches from "./pages/Watches";
 import WatchInfo from './pages/WatchInfo';
 import Brands from "./pages/Brands";
+import Sell from "./pages/Sell";
 
 function App() {
     return (
@@ -18,6 +19,8 @@ function App() {
                 <Route exact path="/watches/:brandId?/:category?" component={Watches}/>
                 <Route exact path="/brands" component={Brands}/>
                 <Route exact path="/WatchInfo/:watchId" component={WatchInfo}/>
+                <Route exact path="/sell" component={Sell}/>
+
             </Switch>
             <Footer/>
         </BrowserRouter>

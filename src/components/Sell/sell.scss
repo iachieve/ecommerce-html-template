@@ -1,0 +1,86 @@
+@import "../../scss/variables.scss";
+
+.dummy-sell-header{
+
+}
+.dummy-sell-header__hero{
+  background-image: url("./images/hero-v2-sm-master.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  width: 100%;
+  background-color: $secondaryLight;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.dummy-sell-header-sep{
+  background: $secondaryLight;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  color: $primary;
+  font-size: 1.2rem;
+}
+.dummy-sell-header-sep i{
+  color: $secondaryDark;
+  padding-right: 3px;
+
+}
+
+.sell-from-container{
+  color: $primary;
+  padding: 0 3rem;
+max-width: 700px;
+  margin: 0 auto;
+
+}
+.sell-from-container__title{
+  color: $secondaryDark;
+  text-align: center;
+  padding: 1rem 0;
+}
+.controls-container{
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  padding: 2px;
+  @media (max-width: 450px){
+    flex-direction: column;
+  }
+}
+.controls-container:hover{
+  background: $secondaryLight;
+}
+.controls-container label{
+  width: 170px;
+}
+.controls-container .input-container {
+  width: calc(100% - 170px);
+  @media (max-width: 450px){
+    width: 100%;
+  }
+}
+.input-container{
+  //background: pink;
+}
+.controls-container input{
+
+  font-size: 1rem;
+  padding: 5px;
+}
+.controls-container input[type='text']{
+  border: 1px solid $lightGray;
+  width: 100%;
+  height: 100%;
+}
+.btn-container{
+  display: flex;
+  flex-direction: row-reverse;
+}
