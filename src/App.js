@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, withRouter} from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
 import './scss/base.scss';
 
 import Header from './components/layout/header';
@@ -16,19 +16,21 @@ function App(props) {
     const plainPages = ['/login', '/signup'];
     return (
         <React.Fragment>
-            { plainPages.includes(props.location.pathname) ?'' : <Header/>}
+            {plainPages.includes(props.location.pathname) ? '' : <Header />}
             <Switch>
-                <Route exact path="/(home|Home|HomePage)/" component={Home}/>
-                <Route exact path="/watches/:brandId?/:category?" component={Watches}/>
-                <Route exact path="/brands" component={Brands}/>
-                <Route exact path="/WatchInfo/:watchId" component={WatchInfo}/>
-                <Route exact path="/sell" component={Sell}/>
+                <Route exact path="/" component={Home} />
+
+                <Route exact path="/(home|Home|HomePage)/" component={Home} />
+                <Route exact path="/watches/:brandId?/:category?" component={Watches} />
+                <Route exact path="/brands" component={Brands} />
+                <Route exact path="/WatchInfo/:watchId" component={WatchInfo} />
+                <Route exact path="/sell" component={Sell} />
             </Switch>
             {
-                plainPages.includes(props.location.pathname) ?'' :  <Footer/>
+                plainPages.includes(props.location.pathname) ? '' : <Footer />
             }
-            <Route exact path="/login" component={Login}/>
-            <Route exact path="/signup" component={Signup}/>
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
         </React.Fragment>
     );
 }
