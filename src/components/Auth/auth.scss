@@ -1,0 +1,154 @@
+@import "../../scss/variables.scss";
+
+.auth-bg {
+  position:relative;
+  height:100vh;
+  width:100vw;
+  margin:0 auto;
+  animation: cf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth-bg img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+
+  animation-name: FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 7s;
+  animation-direction: alternate;
+
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+
+@keyframes FadeInOut {
+  0% {
+    opacity:.01;
+  }
+  20% {
+    opacity:.5;
+  }
+  40% {
+    opacity:.6;
+  }
+  60% {
+    opacity:.7;
+  }
+  80% {
+    opacity:.8;
+  }
+  100% {
+    opacity:.95;
+  }
+
+}
+
+.auth-bg img:nth-of-type(1) {
+  animation-delay: 1s;
+}
+.auth-bg img:nth-of-type(2) {
+  animation-delay: 2s;
+}
+.auth-bg img:nth-of-type(3) {
+  animation-delay: 3s;
+}
+.auth-bg img:nth-of-type(4) {
+  animation-delay: 4s;
+}
+.auth-bg img:nth-of-type(5) {
+  animation-delay: 5s;
+}
+.auth-bg img:nth-of-type(6) {
+  animation-delay: 6s;
+}
+.auth-bg img:nth-of-type(7) {
+  animation-delay: 7s;
+}
+
+
+.auth-form-container{
+  padding: 3rem;
+  border: 1px solid $secondaryDark;
+  box-shadow: 1px 2px 100px $secondaryDark;
+  position: absolute;
+  background: rgba($secondaryDark, 0.7);
+  width: 450px;
+  font-family: $sans-serif;
+  border-radius: 10px;
+}
+.auth-form-control{
+  //background: red;
+}
+.auth-form-control input[type='text'],
+.auth-form-control input[type='password'],
+::placeholder{
+  //margin-right: 5px;
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  color: $secondaryDark;
+}
+.btn-login{
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  color: $secondaryDark;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all ease-in-out 350ms;
+}
+.btn-login:hover{
+  background: $secondaryDark;
+  color: $secondaryLight;
+  box-shadow: 1px 2px 1px rgba($secondaryDark, 0.9);
+}
+.btn-demo{
+  margin-left: 3px;
+}
+.auth-title{
+  //color: $primary;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
